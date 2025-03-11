@@ -1,41 +1,17 @@
 # simple-modern-poetry
 
-[![As usual, XKCD has a comic for
-this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
-
-(Approriately enough, this comic is out of date.)
-
-Python installation and setup is notoriously confusing for both beginners and
-experienced Python developers.
-
-- In the beginning, there was a hack called
-  [`setup.py`](https://github.com/pypa/setuptools) for packaging (1990s–2000s) and it
-  was not good
-
-- … then came [`virtualenv`](https://github.com/pypa/virtualenv),
-  [`pip`](https://github.com/pypa/pip), and `requirements.txt` for isolated environments
-  (2008–2011) yet confusion still reigned
-
-- … and meanwhile, [`conda`](https://github.com/conda/conda),
-  [`brew`](https://github.com/Homebrew/brew), and
-  [`PyInstaller`](https://github.com/pyinstaller/pyinstaller) vied to rule the system
-  installations (2010s)
-
-- … until at last [`pyproject.toml`](https://github.com/pypa/pyproject.toml) matured and
-  [`poetry`](https://github.com/python-poetry/poetry) and
-  [`pipx`](https://github.com/pypa/pipx) promised peace and prosperity (2020s)
-
-- … yet tranquility remains elusive, as new rebel forces aligned with Rust stir unrest
-  and [`uv`](https://github.com/astral-sh/uv) and
-  [`pixi`](https://github.com/prefix-dev/pixi) gather strength …
-
-* * *
-
 ## What is This?
 
 **simple-modern-poetry** is a minimal, modern **Python project template** for new
-projects (Python 3.10–3.13). This template aims to be a good base for serious work but
-also simple so it's an easy option for any small project.
+projects (Python 3.10–3.13) that uses
+[**Poetry 2.0**](https://github.com/python-poetry/poetry).
+This template aims to be a good base for serious work but also simple so it's an easy
+option for any small project.
+
+> [!NOTE]
+> 
+> See [simple-modern-uv](https://github.com/jlevy/simple-modern-uv) for a similar but
+> template for **uv**, which is newer and may be best for new projects.
 
 It is still surprisingly hard to learn modern best practices for setting up Python
 installations and tools without reading many pages of docs on
@@ -49,7 +25,7 @@ So I'm sharing a template that I now use myself and that I can point friends to.
 
 It aims to be "done right" with modern tools but still absolutely as simple as possible:
 
-- Modern [**Poetry 2.0**](https://github.com/python-poetry/poetry) setup with
+- Modern [**Poetry**](https://github.com/python-poetry/poetry) setup with
   [dynamic versioning](https://github.com/mtkennerly/poetry-dynamic-versioning) to make
   releases easier along with the
   [shell](https://github.com/python-poetry/poetry-plugin-shell) and
@@ -179,13 +155,14 @@ changes to this template by running `copier update`.
 
 ## Alternatives
 
-**Poetry** is likely the best package manager for most new projects.
-Those who love the very latest tools may want to consider
+**Poetry** is one of the best package managers for modern Python projects.
+Those who love the latest tools may want to consider
 [**uv**](https://github.com/astral-sh/uv) instead of Poetry.
+
 Or for [**Conda**](https://github.com/conda/conda) dependencies, also consider the newer
 [**pixi**](https://github.com/prefix-dev/pixi/) package manager.
 
-However, currently (early 2025) Poetry remains the most straightforward option,
+Currently (early 2025) Poetry is one of the most mature, straightforward options,
 especially since tool support, such as GitHub workflows and dependabot, still seem
 better for Poetry.
 
